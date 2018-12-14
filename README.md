@@ -23,3 +23,7 @@
   
  - ☑ ~~Add a preloader animation~~.  
  - ☑ ~~Make a brand header~~.
+ 
+ ## NOTES:
+ 
+ Please, don´t use Edge for testing. The localStorage feature is missing in that piece of shit.
