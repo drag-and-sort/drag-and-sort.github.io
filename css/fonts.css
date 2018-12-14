@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'calibre-medium';
+    src: url('fonts/calibre-medium.eot'),
+         url('fonts/calibre-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/calibre-medium.woff2') format('woff2'),
+         url('fonts/calibre-medium.woff') format('woff'),
+         url('fonts/calibre-medium.ttf') format('truetype'),
+         url('fonts/calibre-medium.svg#calibre-medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'calibre-regular';
+    src: url('fonts/calibre-regular.eot'),
+         url('fonts/calibre-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/calibre-regular.woff2') format('woff2'),
+         url('fonts/calibre-regular.woff') format('woff'),
+         url('fonts/calibre-regular.ttf') format('truetype'),
+         url('fonts/calibre-regular.svg#calibre-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

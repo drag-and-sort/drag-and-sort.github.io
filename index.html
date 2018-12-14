@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="msapplication-TileColor" content="#ffe100">
+        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffe100">        
+        <title>Drag and Sort Editor</title>
+        <!-- Start of Favicon -->        
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <!-- End of Favicon -->        
+        <!-- Start of Bootstrap styles -->
+        <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/font-awesome-4.5.0/css/font-awesome.min.css" />
+        <!--End of Bootstrap styles -->
+        <!-- Start of KEditor styles -->
+        <link rel="stylesheet" type="text/css" href="css/keditor-1.1.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/keditor-components-1.1.5.css" />
+        <!-- End of KEditor styles -->
+        <!-- Start of Drag and Sort styles -->
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/drag-and-sort.css" />
+        <!-- End of Drag and Sort styles -->
+        <!-- Start of Bootstrap scripts -->
+        <script type="text/javascript" src="plugins/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            var bsTooltip = $.fn.tooltip;
+            var bsButton = $.fn.button;
+        </script>
+        <!-- end of Bootstrap scripts -->
+        <!-- Start of jQuery plugins scripts -->
+        <script src="plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script src="plugins/jquery-ui.touch-punch-0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript">
+            $.widget.bridge('uibutton', $.ui.button);
+            $.widget.bridge('uitooltip', $.ui.tooltip);
+            $.fn.tooltip = bsTooltip;
+            $.fn.button = bsButton;
+        </script>
+        <script type="text/javascript" src="plugins/jquery.nicescroll-3.6.6/jquery.nicescroll.min.js"></script>
+        <script type="text/javascript" src="plugins/ckeditor-4.5.6/ckeditor.js"></script>
+        <script type="text/javascript" src="plugins/ckeditor-4.5.6/adapters/jquery.js"></script>
+        <!-- End of jQuery plugins scripts -->
+        <!-- Start of KEditor scripts -->
+        <script type="text/javascript" src="js/keditor-1.1.5.js"></script>
+        <script type="text/javascript" src="js/keditor-components-1.1.5.js"></script>
+        <!-- End of KEditor scripts -->
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>        
+        <div id="logo-container">
+            <img src="img/resources/logo/drag-and-sort.png" alt="">
+            <span>
+                <center>TOP 10 of CryptoKitties edition</center>
+            </span>
+        </div>
+        <div id="counting-container">
+            <center>
+                <img src="img/kitties/gif/cryptokitties-logo-hover.gif" alt="">&nbsp;<span id="kitties-counting"></span><span>&nbsp;kitties and counting...</span>
+            </center>
+        </div>
+        <div id="content-areas">
+            <div id="content-area">
+                <!-- Start of kittie -->
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/01.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #1 | Kitty 494142 | Oh, hello! I'm Kitty #494142. I am the heir to a ice cream empire, and my paws have never seen a day's work. Sometimes I daydream of a life full of rearranging price tags at the supermarket, collecting locks of hair, and ahi tuna. I think you'll love me beclaws I have cattitude.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of kittie -->
+                <!-- Start of kittie -->
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/02.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #2 | Kitty 494120 | Hi-ya. I'm Kitty #494120. I collect undies and I love chocolate. I try to model my life after Shaggy. I hope we can be friends.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/03.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #3 | Pinky Brain | Hello! I'm Pinky Brain. Just between us, I sometimes hang out with a guinea pig. It wasn't heavily publicized, but I once had a brief relationship with Cat in the Hat. We're so fur-tunate to have found each other!
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>   
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/04.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #4 | Kitty 491882 | What's up. I'm Kitty #491882. Just between us, I sometimes hang out with a mouse. Sometimes I daydream of a life full of picking on mice, riding the bus, and chocolate. You can be my apprentice.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>      
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/05.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #5 | Green Lantern | G'day! I'm Green Lantern. I work as a Macramé Artist during the week, and I like playing chess on the weekends. I put hollandaise on everything. Like, everything: sandwiches, tacos, overcooked pasta—everything! You can be my apprentice.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>     
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/06.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #6 | Furnado | Greetings! My name's Furnado. I am often described as mysterious, but if you ask me, I'd say I'm more ridiculous than anything. I'll share a secret. When I'm home alone, I lather myself in dijon mustard and listen to Rihanna. Honey, you wouldn't wanna see these claws come out.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>         
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                   
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/07.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #7 | Kitty 492855 | Ciao! My name's Kitty #492855. I once coughed a furball up on Genghis Khan's cat. They had it coming. I once clawed a mouse. I don't like to talk about it. Purrhaps this is the beginning of a beautiful relationship.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>                    
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/08.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #8 | Kitty 492331 | *waves*! I'm Kitty #492331. I work as a Ventriloquist and I love biting ankles. I put hollandaise on everything. Like, everything: sandwiches, whiskies, salami—everything! Just follow my lead.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section> 
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/09.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #9 | Kitty 491908 | *hissing noises*. My name's Kitty #491908. My great-grandmeow belonged to Ash Ketchum. I put dijon mustard on everything. Like, everything: hot dogs, ice cream—everything! Maybe you and I can be partners in crime.
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>     
+                <!-- End of kittie -->
+                <!-- Start of kittie -->                            
+                <section class="keditor-ui keditor-container-inner counting">
+                    <div class="row">
+                        <div class="col-sm-12 keditor-container-content keditor-sub-container-content" data-type="container-content">
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-photo">
+                                <section class="keditor-ui keditor-component-content">
+                                    <div class="thumbnail">
+                                        <img src="img/kitties/png/10.png" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="keditor-ui keditor-component keditor-initialized-component" data-type="component-text">
+                                <section class="keditor-ui keditor-component-content">
+                                    <p>
+                                        #10 | OneGreenEar | Salaam. I'm OneGreenEar. Just between us, I sometimes hang out with a rhino. In my last job, I shared a bed with my manager. Needless to say I was looking for work soon after. It's pawesome to meet you!
+                                    </p>                                                
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </section>                  
+            </div>
+            <div id="content-area-two">
+            </div>
+        </div>
+        <div id="button-add-element-container">
+            <center>
+                <button id="new-kittie" type="button" class="btn btn-success">ADD A NEW KITTIE!</button>
+            </center>
+        </div>
+        <script type="text/javascript">
+            // Preloader
+            $(window).on('load', function() { // makes sure the whole site is loaded 
+                $('#status').fadeOut(); // will first fade out the loading animation 
+                $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+                $('body').delay(350).css({'overflow':'visible'});
+            })        
+
+            // KEditor init
+            $(function() {
+                $('#content-area').keditor({
+                    tabTooltipEnabled: false,
+                    snippetsTooltipEnabled: false,
+                    onReady: function () {
+                        // $('.keditor-content-area').css('min-height', $(window).height()); // #ToDo
+                    }
+                });
+                $('#content-area-two').keditor({
+                    tabTooltipEnabled: false,
+                    snippetsTooltipEnabled: false
+                });                
+            });
+
+            // Add element
+            $('#new-kittie').click(function() {
+                $('<section class="keditor-ui keditor-container-inner counting keditor-container keditor-initialized-container" id="keditor-container-1517552049200"><section class="keditor-ui keditor-container-inner"><div class="row"><div class="col-sm-12 keditor-container-content keditor-sub-container-content ui-sortable" data-type="container-content" id="keditor-container-content-1517552049201"><section class="keditor-ui keditor-component keditor-initialized-component existing-component" data-type="component-photo" id="keditor-component-1517552049206"><section class="keditor-ui keditor-component-content" id="keditor-component-content-1517552049206"><section class="keditor-ui keditor-component-content"><div class="thumbnail"><img src="img/kitties/png/02.png" /></div></section></section><div class="keditor-toolbar keditor-toolbar-component">   <a href="javascript:void(0);" class="keditor-ui btn-component-reposition"><i class="fa fa-arrows"></i></a><a href="javascript:void(0);" class="keditor-ui btn-component-setting"><i class="fa fa-cog"></i></a>   <a href="javascript:void(0);" class="keditor-ui btn-component-duplicate"><i class="fa fa-files-o"></i></a>   <a href="javascript:void(0);" class="keditor-ui btn-component-delete"><i class="fa fa-times"></i></a></div></section><section class="keditor-ui keditor-component keditor-initialized-component existing-component" data-type="component-text" id="keditor-component-1517552049209"><section class="keditor-ui keditor-component-content cke_editable cke_editable_inline cke_contents_ltr cke_show_borders" id="keditor-component-content-1517552049209" contenteditable="true" tabindex="0" spellcheck="false" role="textbox" aria-label="false" aria-describedby="cke_89"><section class="keditor-ui keditor-component-content"><p>#NewKittie | Hey cutie! I´m Mirsoft´s cat :O. In high school, I was voted biggest teacher´s pet. I would give it all up to star in a soap opera. I think you´ll love me beclaws I have cattitude.</p></section></section><div class="keditor-toolbar keditor-toolbar-component">   <a href="javascript:void(0);" class="keditor-ui btn-component-reposition"><i class="fa fa-arrows"></i></a>   <a href="javascript:void(0);" class="keditor-ui btn-component-duplicate"><i class="fa fa-files-o"></i></a>   <a href="javascript:void(0);" class="keditor-ui btn-component-delete"><i class="fa fa-times"></i></a></div></section></div></div></section><div class="keditor-toolbar keditor-toolbar-container ">   <a href="javascript:void(0);" class="keditor-ui btn-container-reposition"><i class="fa fa-sort"></i></a>   <a href="javascript:void(0);" class="keditor-ui btn-container-duplicate"><i class="fa fa-files-o"></i></a><a href="javascript:void(0);" class="keditor-ui btn-container-delete"><i class="fa fa-times"></i></a></div></section>').appendTo('#content-area-two > .keditor-content-area');
+                return false;
+            });
+
+            // Counting items
+            var numItems = $('.counting').length;
+            $("#kitties-counting").html(numItems);
+
+            $('#content-areas').bind("DOMSubtreeModified",function(){
+                numItems = $('.counting').length;
+                $("#kitties-counting").html(numItems);
+            });
+          
+            // Save list
+            $(document).ready(function() {
+                $(window).unload(saveSettings);
+                loadSettings();
+            });
+
+            function loadSettings() {
+                $("#content-areas").html(localStorage.htmlList);
+            }
+
+            function saveSettings() {
+                localStorage.htmlList = $("#content-areas").html();
+            }            
+        </script>
+    </body>
+</html>
